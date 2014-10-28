@@ -1,0 +1,10 @@
+[
+    {
+        "caption" : "FFN",
+        "command" : "ffn"
+    },
+    {
+        "caption" : "FFN: Setup",
+        "command" : "ffn_setup"
+    }
+]
