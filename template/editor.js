@@ -43,12 +43,13 @@ define(function(require, exports, module) {
         $grid         = $links.eq(0).addClass('button'),  //Grid
         $search       = $links.eq(1).addClass('button'),  //Search
         $pretty_print = $links.eq(2).addClass('button'),  //Pretty Print
-        $history      = $links.eq(3).addClass('button'),  //History
-        $preview      = $links.eq(4).addClass('button'),  //Preview
+        $history      = $links.eq(4).addClass('button'),  //History
+        $preview      = $links.eq(5).addClass('button'),  //Preview
         */
-        $info       = $links.eq(5).addClass('button').attr('target', '_blank'), //Info
-        $check_push = $links.eq(6).addClass('button').attr('target', '_blank'), //Check Push
-        $fix_char   = $links.eq(7).addClass('button').attr('target', '_blank'); //Fix Garbled Characters
+        $tree       = $links.eq(3).addClass('button').attr('target', '_blank'), //Tree
+        $info       = $links.eq(6).addClass('button').attr('target', '_blank'), //Info
+        $check_push = $links.eq(7).addClass('button').attr('target', '_blank'), //Check Push
+        $fix_char   = $links.eq(8).addClass('button').attr('target', '_blank'); //Fix Garbled Characters
 
     if (1 || location.port === '21321') !function() {
 
@@ -56,7 +57,7 @@ define(function(require, exports, module) {
         $headLine = $('#head-line');
         $headLine
             .html($btnPublish)
-            .append($btnCommit, $pickReview, $info, $check_push, $fix_char, $btnClearLocal);
+            .append($btnCommit, $pickReview, $info, $check_push, $fix_char, $tree, $btnClearLocal);
 
         $status.append(' ' + document.title);
     }();
@@ -429,7 +430,7 @@ define(function(require, exports, module) {
                 theme: 'monokai'
             }, function() {
 
-                CM = CodeMirror.fromTextArea($advedit[0], {
+                CM = CodeMirror.fromTextArea($advedit.get(0), {
                     mode: 'text/' + (/^(javascript|css)[-_]/i.test(QS.keyword) && RegExp.$1 || 'html'),
                     lineNumbers: true,
                     matchBrackets: true,
