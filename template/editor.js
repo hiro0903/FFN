@@ -18,19 +18,15 @@ define(function(require, exports, module) {
         title = document.title = QS.keyword + '-' + QS.site + '-' + QS.lang,
         url = decodeURIComponent(location.href),
         $command, $command_in, $tip = {}, $cm,
-
-        getHeadLine = function() {
+        $headLine = (function() {
             var hl = []
             for (var i = 3, _ai, l = $formContents.length; i < l; i++) {
                 _ai = $formContents[i]
-                if (_ai.nodeType === 1 && _ai.id === 'advedit') break;
+                if (_ai.nodeType === 1 && (_ai.id === 'advedit' || _ai.id === 'editor_textarea')) break;
                 hl.push(_ai)
             }
             return $(hl)
-        },
-
-        $headLine = getHeadLine(),
-
+        }()),
         $btnPublish = $('input[value="Publish"]'),
         $btnLoadLocal = $('input[value="Load local"]'),
         $btnSaveLocal = $('input[value="Save local"]'),
@@ -51,7 +47,7 @@ define(function(require, exports, module) {
         $check_push = $links.eq(7).addClass('button').attr('target', '_blank'), //Check Push
         $fix_char   = $links.eq(8).addClass('button').attr('target', '_blank'); //Fix Garbled Characters
 
-    if (1 || location.port === '21321') !function() {
+    !function() {
 
         $headLine.wrapAll('<div id="head-line" />');
         $headLine = $('#head-line');
