@@ -106,17 +106,17 @@ define(function(require, exports, module) {
 
                 Alt: {
                     '71': function() { // G Grid
-                        FFN.open('grid.cgi' + location.search)
+                        FFN.open(location.href.replace('editor', 'grid'));
                     },
 
                     '72': function() { // H History
-                        FFN.open('history.cgi' + location.search)
+                        FFN.open(location.href.replace('editor', 'history'));
                     },
 
                     '66': function() { // B Batch publish
-                        FFN.open('pushtolive.cgi?multipush=1&site=' + QS.site)
+                        FFN.open(location.href.replace(/editor\.cgi.+$/, ('pushtolive.cgi?multipush=1&site=' + QS.site) ))
                     },
-
+/*
                     '90': function() { // Z Toogle DB/Local
                         location.href = isDB ? url + '&action=Load local' : url.replace('action=Load local', '')
                     },
@@ -128,7 +128,7 @@ define(function(require, exports, module) {
                     '80': function() { // P Publish sandbox
                         FFN.open('pushtolive.cgi?version=devel&' + QS.site + '-' + QS.lang + '=1&local=1&submit=1&keyword=' + QS.keyword + '&compiled=-1')
                     }
-
+*/
                 },
 
                 'Ctrl+Alt': {
