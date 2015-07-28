@@ -127,6 +127,10 @@ define(function(require, exports, module) {
 
                     '80': function() { // P Publish sandbox
                         open('pushtolive.cgi?version=devel&' + QS.site + '-' + QS.lang + '=1&local=1&submit=1&keyword=' + QS.keyword + '&compiled=-1')
+                    },
+                    
+                    '67': function() { // C - i love chris
+                        console.info('I love chris!');
                     }
 
                 },
