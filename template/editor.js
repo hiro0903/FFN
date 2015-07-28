@@ -146,6 +146,29 @@ define(function(require, exports, module) {
                             ctrl_alt_c = 1
                         }
 
+                    },
+                    '71': function() { // G Grid
+                        open(location.href.replace('editor.cgi', 'grid.cgi'))
+                    },
+
+                    '72': function() { // H History
+                        open(location.href.replace('editor.cgi', 'history.cgi'))
+                    },
+
+                    '66': function() { // B Batch publish
+                        open('pushtolive.cgi?multipush=1&site=' + QS.site)
+                    },
+
+                    '90': function() { // Z Toogle DB/Local
+                        location.href = isDB ? url + '&action=Load local' : url.replace('action=Load local', '')
+                    },
+
+                    '77': function() { // M main.cgi
+                        open('main.cgi')
+                    },
+
+                    '80': function() { // P Publish sandbox
+                        open('pushtolive.cgi?version=devel&' + QS.site + '-' + QS.lang + '=1&local=1&submit=1&keyword=' + QS.keyword + '&compiled=-1')
                     }
                 },
 
