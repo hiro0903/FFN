@@ -106,15 +106,15 @@ define(function(require, exports, module) {
 
                 Alt: {
                     '71': function() { // G Grid
-                        window.open('grid.cgi' + location.search)
+                        FFN.open('grid.cgi' + location.search)
                     },
 
                     '72': function() { // H History
-                        window.open('history.cgi' + location.search)
+                        FFN.open('history.cgi' + location.search)
                     },
 
                     '66': function() { // B Batch publish
-                        window.open('pushtolive.cgi?multipush=1&site=' + QS.site)
+                        FFN.open('pushtolive.cgi?multipush=1&site=' + QS.site)
                     },
 
                     '90': function() { // Z Toogle DB/Local
@@ -122,11 +122,11 @@ define(function(require, exports, module) {
                     },
 
                     '77': function() { // M main.cgi
-                        window.open('main.cgi')
+                        FFN.open('main.cgi')
                     },
 
                     '80': function() { // P Publish sandbox
-                        window.open('pushtolive.cgi?version=devel&' + QS.site + '-' + QS.lang + '=1&local=1&submit=1&keyword=' + QS.keyword + '&compiled=-1')
+                        FFN.open('pushtolive.cgi?version=devel&' + QS.site + '-' + QS.lang + '=1&local=1&submit=1&keyword=' + QS.keyword + '&compiled=-1')
                     }
 
                 },
