@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             ffn-dictionary
 // @name           ffn-dictionary
-// @version        2014.10.14
+// @version        2015.7.28
 // @author         Chris Chu <cchu.tw@ffn.com>
 // @description    Improvement template system
 // @website        https://github.com/hiro0903/FFN/tree/master/template
