@@ -110,11 +110,11 @@ define(function(require, exports, module) {
                     },
 
                     '72': function() { // H History
-                        window._open(location.href.replace('editor.cgi', 'history.cgi'))
+                        window.open(location.href.replace('editor.cgi', 'history.cgi'))
                     },
 
                     '66': function() { // B Batch publish
-                        window._open('pushtolive.cgi?multipush=1&site=' + QS.site)
+                        window.open('pushtolive.cgi?multipush=1&site=' + QS.site)
                     },
 
                     '90': function() { // Z Toogle DB/Local
@@ -122,11 +122,11 @@ define(function(require, exports, module) {
                     },
 
                     '77': function() { // M main.cgi
-                        window._open('main.cgi')
+                        window.open('main.cgi')
                     },
 
                     '80': function() { // P Publish sandbox
-                        window._open('pushtolive.cgi?version=devel&' + QS.site + '-' + QS.lang + '=1&local=1&submit=1&keyword=' + QS.keyword + '&compiled=-1')
+                        window.open('pushtolive.cgi?version=devel&' + QS.site + '-' + QS.lang + '=1&local=1&submit=1&keyword=' + QS.keyword + '&compiled=-1')
                     }
 
                 },
