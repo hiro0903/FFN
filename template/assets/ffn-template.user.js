@@ -8,6 +8,7 @@
 // @updateURL      https://raw.github.com/hiro0903/FFN/master/template/assets/ffn-template.user.js
 // @icon           https://raw.github.com/hiro0903/FFN/master/template/assets/favicon.png
 // @grant          unsafeWindow
+// @grant          GM_openInTab
 
 // @include        *friendfinderinc.com*/cgi-bin/admin/dictionary/editor.cgi*
 
