@@ -7,6 +7,7 @@
 // @website        https://github.com/hiro0903/FFN/tree/master/template
 // @updateURL      https://raw.github.com/hiro0903/FFN/master/template/assets/ffn-template.user.js
 // @icon           https://raw.github.com/hiro0903/FFN/master/template/assets/favicon.png
+// @grant          unsafeWindow
 
 // @include        *friendfinderinc.com*/cgi-bin/admin/dictionary/editor.cgi*
 
