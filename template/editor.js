@@ -106,11 +106,11 @@ define(function(require, exports, module) {
 
                 Alt: {
                     '71': function() { // G Grid
-                        open(location.href.replace('editor.cgi', 'grid.cgi'))
+                        GM_openInTab(location.href.replace('editor.cgi', 'grid.cgi'))
                     },
 
                     '72': function() { // H History
-                        open(location.href.replace('editor.cgi', 'history.cgi'))
+                        GM_openInTab(location.href.replace('editor.cgi', 'history.cgi'))
                     },
 
                     '66': function() { // B Batch publish
