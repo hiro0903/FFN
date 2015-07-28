@@ -22,6 +22,10 @@
   el_script.id = 'seajsnode'
   document.head.appendChild( el_script )
 
+  unsafeWindow.FFN = { 
+    open : GM_openInTab
+  }
+
   el_script.onload = init
 })(function(){
   unsafeWindow.seajs.use('https://rawgit.com/hiro0903/FFN/master/template/main.js')
