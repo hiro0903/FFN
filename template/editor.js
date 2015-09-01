@@ -106,15 +106,15 @@ define(function(require, exports, module) {
 
                 Alt: {
                     '71': function() { // G Grid
-                        FFN.open(location.href.replace('editor', 'grid'));
+                        window.open(location.href.replace('editor', 'grid'));
                     },
 
                     '72': function() { // H History
-                        FFN.open(location.href.replace('editor', 'history'));
+                        window.open(location.href.replace('editor', 'history'));
                     },
 
                     '66': function() { // B Batch publish
-                        FFN.open(location.href.replace(/editor\.cgi.+$/, ('pushtolive.cgi?multipush=1&site=' + QS.site) ))
+                        window.open(location.href.replace(/editor\.cgi.+$/, ('pushtolive.cgi?multipush=1&site=' + QS.site) ))
                     },
 /*
                     '90': function() { // Z Toogle DB/Local
@@ -122,17 +122,17 @@ define(function(require, exports, module) {
                     },
 
                     '77': function() { // M main.cgi
-                        FFN.open('main.cgi')
+                        window.open('main.cgi')
                     },
 
                     '80': function() { // P Publish sandbox
-                        FFN.open('pushtolive.cgi?version=devel&' + QS.site + '-' + QS.lang + '=1&local=1&submit=1&keyword=' + QS.keyword + '&compiled=-1')
+                        window.open('pushtolive.cgi?version=devel&' + QS.site + '-' + QS.lang + '=1&local=1&submit=1&keyword=' + QS.keyword + '&compiled=-1')
                     }
 */
                 },
 
                 'Ctrl+Alt': {
-                    '67': function() { // C Copy template name  
+                    '67': function() { // C Copy template name
                         $command.show()
                         $command_in.val(document.title).select()
 
@@ -150,12 +150,12 @@ define(function(require, exports, module) {
                 },
 
                 'Ctrl+Shift': {
-                    '80': function() { // P            
+                    '80': function() { // P
                         if ($command.is(':hidden')) {
                             $command.show()
                             $command_in.select()
                         } else {
-                            // $command.hide() 
+                            // $command.hide()
                             $command_in.focus()
                         }
                     },
@@ -166,7 +166,7 @@ define(function(require, exports, module) {
 
                 Fn: {
 
-                    '112': function() { // F1            
+                    '112': function() { // F1
                         $tip.f1[$tip.f1.hasClass('_off') ? 'removeClass' : 'addClass']('_off')
 
                         $tip.f2.addClass('_off')
@@ -178,7 +178,7 @@ define(function(require, exports, module) {
                         $tip.f1.addClass('_off')
                     },
 
-                    '122': function() { //F11            
+                    '122': function() { //F11
                         $cm[$cm.hasClass('_f11') ? 'removeClass' : 'addClass']('_f11')
                     }
 
@@ -215,7 +215,7 @@ define(function(require, exports, module) {
             var value = this.value,
                 re_chk_param = /-\w+\s+\w+/g
 
-            if (e.which === 13 && value) { //enter    
+            if (e.which === 13 && value) { //enter
 
                 e.preventDefault()
 
@@ -226,18 +226,18 @@ define(function(require, exports, module) {
                 var Map = {
                     vi: function() {
 
-                        // var url = location.href 
+                        // var url = location.href
 
                         // if( target.match( re_chk_param ) ) {
                         //   target.match( re_chk_param ).forEach(function(v){
-                        //     var param = v.match( /^\S+/ )[0] 
-                        //     var cmd = v.match( /\S+$/ )[0] 
+                        //     var param = v.match( /^\S+/ )[0]
+                        //     var cmd = v.match( /\S+$/ )[0]
 
                         //     if( /^(-s|-site)$/.test(param) ) url = url.replace( /site=[^&]+/, 'site=' + cmd )
                         //     else if ( param === '-t' ) {
                         //       cmd.split(' ').forEach(function(template_name){
-                        //         if( template_name ) open( url.replace(/keyword=[^&]+/, 'keyword=' + template_name ) ) 
-                        //       })     
+                        //         if( template_name ) open( url.replace(/keyword=[^&]+/, 'keyword=' + template_name ) )
+                        //       })
                         //     }
 
                         //   })
@@ -436,7 +436,7 @@ define(function(require, exports, module) {
 
                     profile: 'xhtml'
                 })
-                // CM.focus() 
+                // CM.focus()
 
                 $cm = $(CM.display.wrapper)
             })
